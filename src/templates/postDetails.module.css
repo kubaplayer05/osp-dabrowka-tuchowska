@@ -1,0 +1,78 @@
+.wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: 6rem auto;
+}
+
+.btn {
+    padding: 1rem 1.6rem;
+    font-size: 1.6rem;
+    border-radius: 10px;
+    font-weight: 600;
+    background-color: var(--primary-100);
+    color: var(--white);
+    cursor: pointer;
+    border: none;
+}
+
+.title-class {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.wrapper p {
+    font-size: 1.8rem;
+    color: var(--dark);
+    padding: 0.6rem 0;
+}
+
+.date-class {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--gray);
+    padding: 0.8rem 0;
+}
+
+.gallery-container {
+    margin: 4rem 0;
+}
+
+
+.gallery-container > div > figure {
+    display: flex;
+    flex-basis: 200px;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.gallery-container figure img {
+    cursor: pointer;
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.active-img {
+
+}
+
+.links-container {
+    width: 100%;
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links-container:last-child {
+    margin-left: auto;
+}
+
+.links-container a {
+    font-size: 1.6rem;
+}
+
+.links-container a:hover {
+    text-decoration: underline;
+}

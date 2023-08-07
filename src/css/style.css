@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-100: #D90429;
+    --primary-200: #EF233C;
+    --white: #EDF2F4;
+    --gray: #8D99AE;
+    --dark: #2B2D42;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Inter, sans-serif;
+}
+
+body {
+    color: var(--dark);
+    background-color: var(--white);
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}

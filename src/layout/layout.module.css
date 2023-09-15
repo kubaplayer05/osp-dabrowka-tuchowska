@@ -7,7 +7,7 @@
 .wrapper {
     width: 100%;
     background-color: var(--primary-200);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    box-shadow: 0px 3px 10px 3px rgba(202, 207, 221, 1);
 }
 
 .header {
@@ -46,6 +46,10 @@
     border-radius: 15px;
 }
 
+.menu-icon {
+    display: none;
+}
+
 .footer {
     width: 100%;
     margin-top: auto;
@@ -68,4 +72,27 @@
 
 .main {
     margin: 5rem 0;
+}
+
+@media (max-width: 640px) {
+
+    .header h2 {
+        font-size: 1.6rem;
+    }
+
+    .list {
+        display: none;
+    }
+
+    .copyright {
+        font-size: 1.2rem;
+    }
+
+    .menu-icon {
+        display: block;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        color: #fff;
+    }
 }

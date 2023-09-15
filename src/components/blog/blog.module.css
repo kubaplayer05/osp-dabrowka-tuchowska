@@ -71,3 +71,15 @@
 .next {
     margin-left: auto;
 }
+
+@media (max-width: 640px) {
+
+    .section-title {
+        font-size: 4rem;
+    }
+
+    .container {
+        align-items: center;
+    }
+
+}

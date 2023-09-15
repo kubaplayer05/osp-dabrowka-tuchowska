@@ -20,7 +20,7 @@ const BlogPage = ({ data }) => {
 
 	return (
 		<Layout>
-			<div className={container}>
+			<section className={container}>
 				<h2 className={sectionTitle}>Aktualności</h2>
 				{posts.map(post => {
 					return (
@@ -49,7 +49,7 @@ const BlogPage = ({ data }) => {
 						</Link>
 					)}
 				</div>
-			</div>
+			</section>
 		</Layout>
 	)
 }

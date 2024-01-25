@@ -1,12 +1,18 @@
-import * as React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import parse from "html-react-parser";
+import * as React from "react";
+import { Link, graphql, useStaticQuery } from "gatsby";
+import PostCard from "../postCard/post-card";
 
-import {container, postPreview, postHeader, sectionTitle, pages, next} from "./blog.module.css"
+import {
+    container,
+    postPreview,
+    postHeader,
+    sectionTitle,
+    pages,
+    next,
+} from "./blog.module.css";
 
 const Blog = () => {
-
-	const data = useStaticQuery(graphql`
+    const data = useStaticQuery(graphql`
         query BlogQuery {
             allWpPost(sort: { date: DESC }, limit: 5) {
                 nodes {
@@ -23,31 +29,34 @@ const Blog = () => {
                 }
             }
         }
-	`)
+    `);
 
-    const posts = data.allWpPost.nodes
-	const {pageInfo} = data.allWpPost
+    const posts = data.allWpPost.nodes;
+    const { pageInfo } = data.allWpPost;
 
-	console.log(data)
-
-	return (
+    return (
         <div className={container}>
             <h2 className={sectionTitle}>Aktualności</h2>
-            {posts.map(post => {
-                return <Link to={`/blog/${post.slug}`} className={postPreview} key={post.id}>
-                    <header className={postHeader}>
-                        <h3>{post.title}</h3>
-                        <small>{post.date}</small>
-                    </header>
-                    {parse(post.excerpt)}
-                </Link>
-            })}
-			<div className={pages}>
-				{pageInfo.hasPreviousPage && <Link to={`/page/${pageInfo.currentPage - 1}`}>Poprzednia strona</Link>}
-				{pageInfo.hasNextPage && <Link to={`/page/${pageInfo.currentPage + 1}`} className={next}>Następna strona</Link>}
-			</div>
-        </div>
-    )
-}
 
-export default Blog
+            {posts.map((post) => {
+                return <PostCard data={post} key={post.id} />;
+            })}
+
+            <div className={pages}>
+                {pageInfo.hasPreviousPage && (
+                    <Link to={`/page/${pageInfo.currentPage - 1}`}>
+                        Poprzednia strona
+                    </Link>
+                )}
+
+                {pageInfo.hasNextPage && (
+                    <Link className={next} to={`/page/${pageInfo.currentPage + 1}`}>
+                        Następna strona
+                    </Link>
+                )}
+            </div>
+        </div>
+    );
+};
+
+export default Blog;

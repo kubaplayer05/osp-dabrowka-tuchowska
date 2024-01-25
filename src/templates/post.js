@@ -12,7 +12,6 @@ import {
 	linksContainer,
 	activeImg,
 } from "./postDetails.module.css"
-import { useState } from "react"
 
 const PostDetails = props => {
 	const { post, next, previous } = props.pageContext
@@ -27,7 +26,7 @@ const PostDetails = props => {
 
 	const imgClickHandler = e => {
 		console.log(e.target)
-		e.target.className += ` ${activeImg}`
+		e.target.className += `${activeImg}`
 	}
 
 	return (

@@ -80,8 +80,41 @@
         font-size: 1.6rem;
     }
 
+    .header {
+        position: relative;
+        top: 0;
+        z-index: 100;
+    }
+
+    .nav {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 90;
+        background: var(--primary-100);
+    }
+
     .list {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .list li {
+        display: block;
+        width: 100%;
+        font-size: 1.6rem;
+        padding: 0.4rem 0;
+    }
+
+    .list li a {
+        display: block;
+        padding: 1rem;
+    }
+
+    .active {
+        border-radius: 0;
     }
 
     .copyright {
@@ -90,8 +123,8 @@
 
     .menu-icon {
         display: block;
-        width: 40px;
-        height: 40px;
+        width: 24px;
+        height: 24px;
         cursor: pointer;
         color: #fff;
     }

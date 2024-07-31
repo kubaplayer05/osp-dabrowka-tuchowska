@@ -1,11 +1,8 @@
 import * as React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import PostCard from "../postCard/post-card";
-
 import {
     container,
-    postPreview,
-    postHeader,
     sectionTitle,
     pages,
     next,

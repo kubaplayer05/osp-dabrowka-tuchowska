@@ -7,125 +7,15 @@
 .wrapper {
     width: 100%;
     background-color: var(--primary-200);
-    box-shadow: 0px 3px 10px 3px rgba(202, 207, 221, 1);
-}
-
-.header {
-    margin: 0 auto;
-    padding: 1.8rem;
-    max-width: 1400px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--white);
-}
-
-.header h2 {
-    font-size: 2rem;
-}
-
-.list {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-}
-
-.list li {
-    font-size: 1.4rem;
-    font-weight: 600;
-}
-
-.list li a {
-    padding: 0.6rem 1rem;
-    transition: all 0.3s ease;
-}
-
-.active {
-    color: var(--primary-100);
-    background-color: var(--white);
-    border-radius: 15px;
-}
-
-.menu-icon {
-    display: none;
-}
-
-.footer {
-    width: 100%;
-    margin-top: auto;
-}
-
-.copyright {
-    display: flex;
-    justify-content: center;
-    padding: 1.4rem 1rem;
-    text-align: center;
-    background-color: #000000;
-    color: var(--white);
-    font-size: 1.6rem;
-    font-weight: 600;
-}
-
-.copyright a {
-    color: #1eb7ea;
+    box-shadow: 0 3px 10px 3px rgba(202, 207, 221, 1);
 }
 
 .main {
-    margin: 5rem 0;
+    padding-bottom: 5rem;
 }
 
-@media (max-width: 640px) {
-
-    .header h2 {
-        font-size: 1.6rem;
-    }
-
-    .header {
-        position: relative;
-        top: 0;
-        z-index: 100;
-    }
-
-    .nav {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        z-index: 90;
-        background: var(--primary-100);
-    }
-
-    .list {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .list li {
-        display: block;
-        width: 100%;
-        font-size: 1.6rem;
-        padding: 0.4rem 0;
-    }
-
-    .list li a {
-        display: block;
-        padding: 1rem;
-    }
-
-    .active {
-        border-radius: 0;
-    }
-
-    .copyright {
-        font-size: 1.2rem;
-    }
-
-    .menu-icon {
-        display: block;
-        width: 24px;
-        height: 24px;
-        cursor: pointer;
-        color: #fff;
+@media (prefers-color-scheme: dark) {
+    .wrapper {
+        box-shadow: 0 3px 10px 3px rgb(56, 61, 61);
     }
 }

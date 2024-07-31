@@ -35,3 +35,15 @@
 .post-preview p {
     font-size: 1.8rem;
 }
+
+@media (max-width: 640px) {
+    .post-preview p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .post-preview {
+        background: var(--dark-200);
+    }
+}

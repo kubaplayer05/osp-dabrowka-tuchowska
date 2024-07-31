@@ -29,7 +29,7 @@
 
 .wrapper p {
     font-size: 1.8rem;
-    color: var(--dark);
+    color: var(--dark-200);
     padding: 0.6rem 0;
 }
 
@@ -83,4 +83,18 @@
 
 .links-container a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+
+    .title-class {
+        font-size: 1.8rem;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .wrapper > p {
+        color: var(--white);
+    }
 }

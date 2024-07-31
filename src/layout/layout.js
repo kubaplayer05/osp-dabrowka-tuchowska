@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { container, wrapper } from "./layout.module.css";
+import { container, wrapper, main } from "./layout.module.css";
 import Footer from "./footer/footer";
 import Header from "./header/header";
 
@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
             <div className={wrapper}>
                 <Header />
             </div>
-            <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <motion.main className={main} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                 {children}
             </motion.main>
             <Footer />
